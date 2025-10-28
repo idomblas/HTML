@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <script defer src="lista_de_tareas.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tareas de Itziar</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #e3c0e7;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+      }
+      #app-container {
+        width: 400px;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .completed {
+        text-decoration: line-through;
+        color: #8b8a8a;
+      }
+    </style>
+    <link rel="stylesheet" href="lista_de_tareas.css" />
+  </head>
+  <body>
+    <div id="app-container">
+      <h1>Lista de Tareas Pendientes</h1>
+
+      <div id="input-container">
+        <input
+          type="text"
+          id="new-task-input"
+          placeholder="Escribe una nueva tarea..."
+        />
+        <button id="add-task-btn">Añadir Tarea</button>
+      </div>
+
+      <ul id="task-list"></ul>
+    </div>
+  </body>
+</html>
