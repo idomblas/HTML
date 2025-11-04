@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tres Divs</title>
+    <style>
+      .contenedor {
+        width: 400px;
+        height: 400px;
+        position: relative;
+      }
+
+      .caja1 {
+        height: 100px;
+        width: 100px;
+        background-color: lightblue;
+        border: 1px solid #333;
+        position: absolute;
+        z-index: 1;
+      }
+
+      .caja2 {
+        animation: bounce 1s ease-in-out infinite;
+        height: 100px;
+        width: 100px;
+        background-color: rgb(184, 50, 26);
+        border: 1px solid #333;
+        position: absolute;
+        top: 100px;
+        left: 390px;
+        z-index: 2;
+      }
+
+      .caja3 {
+        height: 100px;
+        width: 100px;
+        background-color: rgb(203, 27, 219);
+        border: 1px solid #333;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: 0;
+        transition: transform 0.5s ease-in-out, background-color 0.5s ease;
+      }
+      .caja3:hover {
+        transform: scale(1.5) rotate(359deg);
+        background-color: rgb(25, 214, 189);
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+          transform: scale(1);
+        }
+        20% {
+          transform: translateY(-25px) scale(1.05, 0.95);
+        }
+        50% {
+          transform: translateY(-50px);
+          transform: scale(0.9, 0.8);
+        }
+        70% {
+          transform: translateY(-10px) scale(0.98, 1.02);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="caja1">Div 1</div>
+      <div class="caja2">Div 2</div>
+      <div class="caja3">Div 3</div>
+    </div>
+  </body>
+</html>

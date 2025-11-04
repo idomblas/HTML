@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba Responsive</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 20px;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90%;
+        max-width: 1200px;
+        gap: 20px;
+      }
+
+      .box {
+        background: #0078d7;
+        color: white;
+        font-size: 1.2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        border-radius: 10px;
+        flex: 1 1 45%;
+        transition: all 0.3s ease;
+      }
+
+      @media (min-width: 1024px) {
+        .box {
+          flex: 1 1 30%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .box {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Test de diseño responsive</h1>
+    <div class="container">
+      <div class="box">Div 1</div>
+      <div class="box">Div 2</div>
+      <div class="box">Div 3</div>
+      <div class="box">Div 4</div>
+    </div>
+  </body>
+</html>
