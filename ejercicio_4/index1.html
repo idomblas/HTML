@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio: Refactorizar a HTML Semántico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles1.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- Reemplaza este <div> por la etiqueta semántica correcta para la cabecera principal -->
+      <div class="header">
+        <span class="site-title text-2xl font-bold">Blog No Semántico</span>
+
+        <!-- Reemplaza este <div> por la etiqueta semántica correcta para la navegación principal -->
+        <div class="navigation mt-2">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Artículos</a></li>
+            <li><a href="#">Sobre mí</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main-content-area">
+        <!-- Reemplaza este <div> por la etiqueta semántica que representa el contenido principal y único de la página -->
+        <div class="primary-content">
+          <!-- Reemplaza este <div> por la etiqueta semántica para un contenido autocontenido e independiente (como un post de blog) -->
+          <div class="post">
+            <span class="post-title">¿Qué es el HTML Semántico?</span>
+            <span class="post-meta block"
+              >Publicado por Admin el 27 de Octubre, 2025</span
+            >
+
+            <p>
+              El HTML semántico es crucial para la accesibilidad y el SEO.
+              Utilizar las etiquetas correctas ayuda a los navegadores,
+              buscadores y tecnologías asistivas a entender la estructura de tu
+              contenido.
+            </p>
+
+            <!-- Envuelve la imagen y su descripción con las etiquetas semánticas correctas para figuras y leyendas -->
+            <div>
+              <img
+                src="https://placehold.co/600x300/a3e635/ffffff?text=HTML5+Tags"
+                alt="Diagrama de etiquetas HTML5"
+              />
+              <span>Un ejemplo visual de etiquetas semánticas.</span>
+            </div>
+            <!-- Reemplazo de <div> de imagen y descripción -->
+
+            <p>
+              En lugar de usar divs genéricos para todo, deberíamos optar por
+              etiquetas como...
+            </p>
+
+            <!-- Reemplaza este <div> por una etiqueta semántica que agrupe una sección temática dentro del artículo -->
+            <div class="content-section">
+              <span class="section-title font-semibold block mb-2"
+                >Beneficios Principales</span
+              >
+              <ul>
+                <li>Mejora Accesibilidad</li>
+                <li>Optimiza SEO</li>
+                <li>Código más legible</li>
+              </ul>
+            </div>
+            <!-- Reemplazo de <div class="content-section"> -->
+          </div>
+          <!-- Reemplazo de <div class="post"> -->
+
+          <!-- Podría haber más posts (más <div class="post"> o la etiqueta semántica correspondiente) aquí -->
+        </div>
+        <!-- Reemplazo de <div class="primary-content"> -->
+
+        <!-- Reemplaza este <div> por la etiqueta semántica para contenido relacionado pero secundario (barra lateral) -->
+        <div class="sidebar-content">
+          <span class="sidebar-title font-semibold block mb-2">Archivos</span>
+          <ul>
+            <li><a href="#">Octubre 2025</a></li>
+            <li><a href="#">Septiembre 2025</a></li>
+          </ul>
+          <span class="sidebar-title font-semibold block mt-4 mb-2"
+            >Categorías</span
+          >
+          <ul>
+            <li><a href="#">Web</a></li>
+            <li><a href="#">Tutoriales</a></li>
+          </ul>
+        </div>
+        <!-- Reemplazo de <div class="sidebar-content"> -->
+      </div>
+
+      <!-- Reemplaza este <div> por la etiqueta semántica correcta para el pie de página -->
+      <div class="footer">
+        <span
+          >© 2025 Blog No Semántico. Asegúrate de usar etiquetas
+          correctas.</span
+        >
+      </div>
+      <!-- Reemplazo de <div class="footer"> -->
+    </div>
+  </body>
+</html>
