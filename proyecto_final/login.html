@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Portfolio Ilustradora</title>
+    <!-- Req 1: Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://placehold.co/32x32/5e35b1/ffffff?text=IL"
+    />
+    <!-- Req 4.c: Enlace al CSS compartido -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Estilos específicos para la página de login */
+      .login-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: var(--color-secundario);
+      }
+    </style>
+  </head>
+  <body class="login-body">
+    <div class="formulario-contenedor">
+      <h2>Acceso al Portfolio</h2>
+      <form id="loginForm">
+        <!-- Req 1: Formulario usuario y contraseña -->
+        <label for="usuario">Usuario (Email)</label>
+        <!-- Req 2: Validación de email -->
+        <input
+          type="email"
+          id="usuario"
+          name="usuario"
+          required
+          placeholder="ejemplo@dominio.com"
+        />
+
+        <label for="contrasena">Contraseña</label>
+        <!-- Req 1.a: Contraseña oculta -->
+        <input
+          type="password"
+          id="contrasena"
+          name="contrasena"
+          required
+          placeholder="Escribe tu contraseña aquí"
+        />
+
+        <p
+          id="error-mensaje"
+          style="color: red; display: none; margin-bottom: 15px"
+        >
+          Por favor, introduce un email válido.
+        </p>
+
+        <!-- Req 1.b: Botón de acción -->
+        <button type="submit" class="btn-principal">Entrar al Portfolio</button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Detiene el envío real del formulario
+
+          const usuarioInput = document.getElementById("usuario");
+          const contrasenaInput = document.getElementById("contrasena");
+          const errorMensaje = document.getElementById("error-mensaje");
+
+          errorMensaje.style.display = "none";
+
+          // Validación de email (Req 2)
+          if (
+            !usuarioInput.value.includes("@") ||
+            !usuarioInput.value.includes(".")
+          ) {
+            errorMensaje.textContent =
+              "Por favor, introduce una dirección de email válida.";
+            errorMensaje.style.display = "block";
+            return;
+          }
+
+          // Simulación de credenciales correctas (Req 1.b)
+          // Ya que asumimos que las credenciales son correctas, redirigimos:
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>

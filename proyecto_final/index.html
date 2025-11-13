@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bienvenida - Portfolio Ilustradora</title>
+    <!-- Req 1: Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://placehold.co/32x32/5e35b1/ffffff?text=IL"
+    />
+    <!-- Req 4.c: Enlace al CSS compartido -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>[Tu Nombre] - Ilustradora Digital</h1>
+    </header>
+
+    <!-- Req 2.b: Elemento de Navegación -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <!-- Enlaces con transición :hover (Req 4) -->
+        <li><a href="juego.html">TFG: Juego de Mesa</a></li>
+        <li><a href="otros.html">Otras Ilustraciones</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <main class="animacion-bienvenida">
+      <!-- Req 2.a & Req 3: Mensaje de Bienvenida con Animación -->
+      <h1
+        style="
+          color: var(--color-principal);
+          text-align: center;
+          margin-top: 30px;
+        "
+      >
+        ¡Bienvenida/o a mi Portfolio Artístico!
+      </h1>
+      <p style="text-align: center; font-size: 1.2em">
+        Soy una ilustradora digital especializada en concept art y diseño de
+        personajes. Explora mis proyectos más destacados a continuación.
+      </p>
+
+      <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0" />
+
+      <!-- Simulación de secciones para animar el scroll (si fuera de una sola página, Req 4.a) -->
+      <section id="presentacion">
+        <h2>Sobre Mí</h2>
+        <p>
+          Licenciada en Bellas Artes con un Máster en Diseño de Juegos. Mi
+          pasión es dar vida a mundos e historias a través de la ilustración.
+          Aquí encontrarás una muestra de mis trabajos más recientes y mi
+          proyecto de fin de grado.
+        </p>
+      </section>
+
+      <!-- Preview de los proyectos -->
+      <div class="galeria-contenido">
+        <div class="tarjeta-ilustracion">
+          <img
+            src="https://placehold.co/500x300/5e35b1/ffffff?text=Arte+del+Juego+TFG"
+            alt="Arte del juego de mesa TFG"
+          />
+          <div style="padding: 15px">
+            <h3>TFG: El Misterio del Bosque</h3>
+            <p>
+              Mi proyecto de fin de grado: desarrollo completo del arte y diseño
+              gráfico para un juego de mesa de estrategia.
+            </p>
+            <a
+              href="juego.html"
+              class="btn-principal"
+              style="display: block; margin-top: 10px"
+              >Ver Proyecto</a
+            >
+          </div>
+        </div>
+
+        <div class="tarjeta-ilustracion">
+          <img
+            src="https://placehold.co/500x300/ff80ab/212121?text=Ilustracion+Personal"
+            alt="Ilustración personal destacada"
+          />
+          <div style="padding: 15px">
+            <h3>Ilustraciones y Encargos</h3>
+            <p>
+              Una colección de ilustraciones personales, encargos de clientes y
+              diseños de personajes de fantasía.
+            </p>
+            <a
+              href="otros.html"
+              class="btn-principal"
+              style="display: block; margin-top: 10px"
+              >Ver Galería</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2024 Portfolio de Ilustradora. Todos los derechos reservados.
+      </p>
+    </footer>
+  </body>
+</html>

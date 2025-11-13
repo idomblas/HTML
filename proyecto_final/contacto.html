@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <!-- Req 1: Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://placehold.co/32x32/5e35b1/ffffff?text=IL"
+    />
+    <!-- Req 4.c: Enlace al CSS compartido -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Estilos específicos para la página de contacto */
+      .mapa-contenedor {
+        margin: 30px 0;
+        border: 5px solid var(--color-principal);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .mapa-contenedor iframe {
+        width: 100%;
+        height: 400px;
+        border: none;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Hablemos - Contacta Conmigo</h1>
+    </header>
+
+    <main>
+      <!-- Req 4.b: Link para volver a la página principal -->
+      <p>
+        <a
+          href="index.html"
+          style="
+            color: var(--color-principal);
+            font-weight: bold;
+            text-decoration: underline;
+          "
+          >← Volver a la Página Principal</a
+        >
+      </p>
+
+      <!-- Req 5.b: Formulario de contacto -->
+      <div class="formulario-contenedor">
+        <h2>Envíame un mensaje</h2>
+        <form id="contactForm">
+          <label for="nombre">Nombre Completo</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            required
+            placeholder="Tu Nombre"
+          />
+
+          <label for="email">Correo Electrónico</label>
+          <!-- Usamos type="email" para la validación nativa -->
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="ejemplo@dominio.com"
+          />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="6"
+            required
+            placeholder="Describe tu consulta o encargo..."
+          ></textarea>
+
+          <!-- El formulario no se envía, solo muestra un mensaje de éxito -->
+          <button
+            type="button"
+            onclick="mostrarConfirmacion()"
+            class="btn-principal"
+          >
+            Enviar Mensaje
+          </button>
+        </form>
+        <p
+          id="confirmacion"
+          style="
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none;
+          "
+        >
+          ¡Gracias! Tu mensaje ha sido enviado (simulado). Te responderé pronto.
+        </p>
+      </div>
+
+      <!-- Req 5.a: Mapa dentro de un iframe -->
+      <h2>Nuestra Localización (Simulada)</h2>
+      <p>
+        Aunque trabajo online, esta es la ubicación aproximada de mi estudio de
+        diseño principal.
+      </p>
+      <div class="mapa-contenedor">
+        <!-- Iframe de Google Maps de una ubicación de ejemplo (Barcelona) -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.4402609074093!2d2.155400915663738!3d41.3850901792645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49806b3a3250b%3A0x63353e41d8e13271!2sBarcelona%2C%20Espa%C3%B1a!5e0!3m2!1ses!2s!4v1678987654321!5m2!1ses!2s"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de localización simulada"
+        >
+        </iframe>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Portfolio de Ilustradora. Contacto.</p>
+    </footer>
+
+    <script>
+      function mostrarConfirmacion() {
+        // Validación muy básica para que no esté vacío
+        const nombre = document.getElementById("nombre").value;
+        const email = document.getElementById("email").value;
+        const mensaje = document.getElementById("mensaje").value;
+
+        if (nombre && email && mensaje && email.includes("@")) {
+          // Simulación de envío exitoso
+          document.getElementById("confirmacion").style.display = "block";
+          document.getElementById("contactForm").reset();
+        } else {
+          // En lugar de alert(), usamos un mensaje interno
+          document.getElementById("confirmacion").textContent =
+            "Por favor, rellena todos los campos correctamente.";
+          document.getElementById("confirmacion").style.color = "red";
+          document.getElementById("confirmacion").style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
